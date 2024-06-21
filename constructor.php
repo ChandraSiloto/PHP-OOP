@@ -5,7 +5,7 @@
         public $penulis;
         public $penerbit;
         public $harga;
-
+        
         public function __construct($judul, $penulis, $penerbit, $harga) {
             
             print_r('Hello World' . '<br>' );
@@ -13,31 +13,34 @@
                     $this->judul = $judul . '<br>' ;
                     $this->penulis = $penulis . '<br>' ;
                     $this->penerbit = $penerbit . '<br>' ;
-                    $this->harga = $harga . '<br>' ;
+                    $this->harga = $harga . '<br>';
         }
 
-        public function get_Judul(){
+        public function getJudul(){
             return  $this->judul;
         }  
         
-        public function get_Penulis(){
+        public function getPenulis(){
             return $this->penulis;
         }
 
-        public function get_Penerbit() {
+        public function getPenerbit() {
             return $this->penerbit;
         }
 
-        public function get_Harga() {
+        public function getHarga() {
             return $this->harga;
         }
 
     }
 
     $produk = new Produk('Naruto', 'Masashi Kisimoto', 'Sheran', 30000);
-    echo $produk->get_Judul();
-    echo $produk->get_Penulis();
-    echo $produk->get_Penerbit();
-    echo $produk->get_Harga(); 
+    // echo $produk->getJudul();
+    // echo $produk->getPenulis();
+    // echo $produk->getPenerbit();
+    // echo $produk->getHarga();
+    
+   $produk2 = $produk->getJudul() . $produk->getPenulis() . $produk->getPenerbit() . $produk->getHarga();
+   print_r($produk2);
     var_dump($produk)
 ?>
